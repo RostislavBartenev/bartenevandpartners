@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&amp;display=swap"/>
-    <title>Bartenev and Partners</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>Bartenev & Partners</title>
   </head>
   <body>
     <div class="container">
@@ -14,10 +15,10 @@
         <nav>
           <ul>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Команда</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
         </nav><a href="tel:+77017144306">8 (701) 714-43-06</a></a>
       </div>
@@ -31,10 +32,36 @@
             <button>Получить консультацию</button>
           </div>
         </div>
-      </section>
+      </section><a name="about"></a>
+      <section class="about">
+        <div class="container">
+          <div class="about-container">
+            <div class="about-container-text">
+              <h1 class="title-left">О компании</h1>
+              <hr class="title"/>
+              <p>Наша компания «Bartenev & Pаrtners» была основана в марте 2014 года. Главной целью деятельности компании является оказание квалифицированной юридической помощи населению. Изначально, когда мы только планировали создать наше ТОО, основным толчком послужил тот факт, что очень часто к нам обращались люди, чьи материальные возможности не позволяли им обращаться к высокооплачиваемым адвокатам либо юристам, представляющим интересы в суде. И наблюдая за тем, что многие из них оказывались в затруднительных ситуациях, которые требовали своевременного оказания квалифицированной юридической помощи,</p>
+            </div>
+            <div class="about-container-advantages">
+              <div class="about-container-advantages-card"><img src="./img/exp.png" alt="exp"/>
+                <h4 class="about-container-advantages-card-title"><span>> 15 лет </span>юридической практики</h4>
+              </div>
+              <div class="about-container-advantages-card"><img src="./img/team.png" alt="quality"/>
+                <h4 class="about-container-advantages-card-title"> <span>Профессиональная </span>команда</h4>
+              </div>
+              <div class="about-container-advantages-card"><img src="./img/affairs.png" alt="affairs"/>
+                <h4 class="about-container-advantages-card-title"> <span>1413 </span>проведенных дел</h4>
+              </div>
+              <div class="about-container-advantages-card"><img src="./img/success.png" alt="success"/>
+                <h4 class="about-container-advantages-card-title"><span>87% </span>выигранных дел</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><a name="services"></a>
       <section class="services">
         <div class="container">
           <h1 class="title">Услуги</h1>
+          <hr class="title"/>
           <div class="services-container">
             <div class="services-container-card"><img src="./img/law1.png" alt="1"/>
               <h3>Представление интересов</h3>
@@ -62,8 +89,100 @@
             </div>
           </div>
         </div>
+      </section><a name="team"></a>
+      <section class="team">
+        <div class="container">
+          <h1 class="title">Ведущие специалисты</h1>
+          <hr class="title"/>
+          <div class="swiper-container swiper-container-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-2">
+                <div class="team-container">
+                  <div class="team-container-text">
+                    <h1>Бартенев Александр Николаевич</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nisi voluptas, natus optio nobis maxime, molestiae iste possimus cumque atque, totam maiores sed? Temporibus, impedit tenetur obcaecati accusantium quisquam officiis omnis ea! Provident quia cum animi magnam labore temporibus porro fuga quaerat? Incidunt eligendi molestias dolorum quia, dolorem autem rem.</p>
+                    <div class="skills">
+                      <ul>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem.</li>
+                      </ul>
+                      <ul>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem, ipsum.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="team-container-img"><img src="./img/t-1.jpg" alt="t-1"/></div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-2">
+                <div class="team-container">
+                  <div class="team-container-text">
+                    <h1>Аппаев Амирхан Акимжанович</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nisi voluptas, natus optio nobis maxime, molestiae iste possimus cumque atque, totam maiores sed? Temporibus, impedit tenetur obcaecati accusantium quisquam officiis omnis ea! Provident quia cum animi magnam labore temporibus porro fuga quaerat? Incidunt eligendi molestias dolorum quia, dolorem autem rem.</p>
+                    <div class="skills">
+                      <ul>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem.</li>
+                      </ul>
+                      <ul>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem, ipsum.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="team-container-img"><img src="./img/t-2.png" alt="t-1"/></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="clients">
+        <div class="container">
+          <h1 class="title">Наши клиенты</h1>
+          <hr class="title"/>
+          <div class="swiper-container swiper-container-1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-1"><a href="https://ttc.kz/ru/" target="_blank" rel="noopener noreferrer"><img src="./img/cl-1.svg" alt="cl-1"/></a></div>
+              <div class="swiper-slide swiper-slide-1"><a href="https://kazagro.kz/" target="_blank" rel="noopener noreferrer"><img src="./img/cl-2.png" alt="cl-2"/></a></div>
+              <div class="swiper-slide swiper-slide-1"><a href="https://telecom.kz/ru" target="_blank" rel="noopener noreferrer"><img src="./img/cl-3.svg" alt="cl-3"/></a></div>
+              <div class="swiper-slide swiper-slide-1"><a href="https://bi-group.org/ru/" target="_blank" rel="noopener noreferrer"><img src="./img/cl-4.png" alt="cl-4"/></a></div>
+              <div class="swiper-slide swiper-slide-1"><a href="http://amangeldygas.kz/" target="_blank" rel="noopener noreferrer"><img src="./img/cl-5.png" alt="cl-5"/></a></div>
+              <div class="swiper-slide swiper-slide-1"><a href="https://www.ktzh-gp.kz/ru/index.php" target="_blank" rel="noopener noreferrer"><img src="./img/cl-6.png" alt="cl-6"/></a></div>
+            </div>
+          </div>
+        </div>
+      </section><a name="contacts"></a>
+      <section class="contacts">
+        <div class="container">
+          <h1 class="title">Контактная информация</h1>
+          <hr class="title"/>
+          <div class="contacts-container">
+            <div class="contacts-container-email">
+              <h3>Написать нам</h3>
+              <hr/><a href="mailto:bart@mail.ru">bart@mail.ru</a>
+            </div>
+            <div class="contacts-container-phone">
+              <h3>Позвонить</h3>
+              <hr/><a href="tel:+77017144306">8 (701) 714-43-06</a>
+            </div>
+            <div class="contacts-container-address">
+              <h3>Наш адрес</h3>
+              <hr/>
+              <p>г.Астана, 010000<br/>ул. Сауран 1, офис 604</p>
+            </div>
+          </div>
+        </div><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4f392584527c767a8cdcd11cb776e28cbf54a99201b4eea00e524443ebfe9291&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
       </section>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
