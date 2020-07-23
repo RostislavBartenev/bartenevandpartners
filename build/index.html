@@ -4,13 +4,40 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&amp;display=swap"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>Bartenev & Partners</title>
   </head>
   <body>
-    <div class="container">
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+          (function (d, w, c) {
+              (w[c] = w[c] || []).push(function() {
+                  try {
+                      w.yaCounter65696746 = new Ya.Metrika({
+                          id:65696746,
+                          clickmap:true,
+                          trackLinks:true,
+                          accurateTrackBounce:true
+                      });
+                  } catch(e) { }
+              });
+    
+              var n = d.getElementsByTagName("script")[0],
+                  s = d.createElement("script"),
+                  f = function () { n.parentNode.insertBefore(s, n); };
+              s.type = "text/javascript";
+              s.async = true;
+              s.src = "https://mc.yandex.ru/metrika/watch.js";
+    
+              if (w.opera == "[object Opera]") {
+                  d.addEventListener("DOMContentLoaded", f, false);
+              } else { f(); }
+          })(document, window, "yandex_metrika_callbacks");
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/65696746" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    <div class="container"><a name="main"></a>
       <div class="navbar"><img src="img/logo_bart_x.png" alt="logo"/>
         <nav>
           <ul>
@@ -29,7 +56,7 @@
           <div class="container">
             <h1>Юридические услуги</h1>
             <h2>по всему Казахстану</h2>
-            <button>Получить консультацию</button>
+            <button data-toggle="modal">Получить консультацию</button>
           </div>
         </div>
       </section><a name="about"></a>
@@ -65,27 +92,21 @@
           <div class="services-container">
             <div class="services-container-card"><img src="./img/law1.png" alt="1"/>
               <h3>Представление интересов</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nesciunt!</p>
             </div>
             <div class="services-container-card"><img src="./img/law2.png" alt="2"/>
               <h3>Брачно-семейные отношения</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nesciunt!</p>
             </div>
             <div class="services-container-card"><img src="./img/law3.png" alt="3"/>
               <h3>Сопровождение бизнеса</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nesciunt!</p>
             </div>
             <div class="services-container-card"><img src="./img/law4.png" alt="4"/>
               <h3>Автоюрист</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nesciunt!</p>
             </div>
             <div class="services-container-card"><img src="./img/law5.png" alt="5"/>
               <h3>Защита прав потребителя</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nesciunt!</p>
             </div>
             <div class="services-container-card"><img src="./img/law6.png" alt="6"/>
               <h3>Земельные споры</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nesciunt!</p>
             </div>
           </div>
         </div>
@@ -163,11 +184,16 @@
       <section class="contacts">
         <div class="container">
           <h1 class="title">Контактная информация</h1>
-          <hr class="title"/>
+          <form class="form footer__form" action="send.php" method="POST" id="footer-form">
+            <h2>Получить консультацию</h2>
+            <input type="text" name="userName" placeholder="Ваше имя"/>
+            <input type="tel" name="userPhone" placeholder="Ваш номер телефона:"/>
+            <button class="footer__button button">Отправить</button>
+          </form>
           <div class="contacts-container">
             <div class="contacts-container-email">
               <h3>Написать нам</h3>
-              <hr/><a href="mailto:bart@mail.ru">bart@mail.ru</a>
+              <hr/><a href="mailto:alxbart@mail.ru">alxbart@mail.ru</a>
             </div>
             <div class="contacts-container-phone">
               <h3>Позвонить</h3>
@@ -176,13 +202,41 @@
             <div class="contacts-container-address">
               <h3>Наш адрес</h3>
               <hr/>
-              <p>г.Астана, 010000<br/>ул. Сауран 1, офис 604</p>
+              <p>г.Астана, 010000<br/>ул. Сауран 1, офис 604           </p>
             </div>
           </div>
-        </div><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4f392584527c767a8cdcd11cb776e28cbf54a99201b4eea00e524443ebfe9291&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <div class="map" id="YaMaps"></div>
       </section>
+      <div class="modal">
+        <div class="modal-dialog">
+          <button class="modal__close"></button>
+          <h3 class="modal__title">Оставьте заявку и мы свяжемся с вами</h3>
+          <form class="form modal__form" action="send.php" method="POST" id="modal-form">
+            <input type="text" name="userName" placeholder="Ваше имя"/>
+            <input type="tel" name="userPhone" placeholder="Ваш номер телефона:"/>
+            <button class="modal__button button">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-answer">
+        <div class="modal-answer__dialog">
+          <button class="modal-answer__close"></button>
+          <p class="modal-answer__title"></p>
+        </div>
+      </div>
     </main>
+    <script>
+      var __REPLAIN_ = 'bafc462d-1d68-4141-ae82-179381b4cc1c';
+      (function (u) {
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = u;
+          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+      })('https://widget.replain.cc/dist/client.js');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
